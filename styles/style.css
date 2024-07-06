@@ -7,7 +7,53 @@
 }
 
 .page-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 147px;
+    z-index: 100;
+}
 
+.page-header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(222, 222, 222, 0.5);
+    @supports (background-filter: blur(10px)){
+        background-filter: blur(10px);
+        background-color: rgba(222, 222, 222, 0.5);
+    }
+}
+
+.page-header__container{
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 1414px;
+    width: 100%;
+}
+
+.page-header__logo{
+    display: inline-block;
+    margin-right: 237px;
+}
+
+.page-header__logo-img{
+    width: 100%;
+    height: 100%;
+}
+
+.page-header__nav{
+    display: inline-block;
+    margin-right: 230px;
 }
 
 .page-header__nav-link{
@@ -17,6 +63,72 @@
     font-size: 18px;
     line-height: 25px;
     text-decoration: none;
+}
+
+.page-header__user-btn{
+    box-sizing: border-box;
+    padding: 15px 40px;
+    border: 1px solid #1f1e1e;
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 600;
+    color: #1f1e1e;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.home{
+    padding-top: 147px;
+}
+
+.main-header{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.main-header__title,
+.main-header__text{
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    font-family: 'Lora', sans-serif;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: normal;
+    text-transform: uppercase;
+    color: #1f1e1e;
+}
+
+.main-header__title{
+    margin: 0 0 70px;
+}
+.main-header__text{
+    max-width: 990px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-header__picture{
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+.main-header__picture::before{
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: 16.927%;
+}
+
+.main-header__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .page-footer{
